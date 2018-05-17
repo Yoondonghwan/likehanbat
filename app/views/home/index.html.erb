@@ -1,0 +1,37 @@
+<%= render 'header' %>
+
+<div class="container-fluid">
+    <br id="timetable">
+    <div class="section_title">
+        <img src="<%=asset_path 'navbar/SCHEDULE.png'%>" alt="SCHEDULE"/>
+    </div>
+    <%= render 'timetable' %>
+</div>
+
+<div class="container">
+    <br id="booth">
+    <div class="section_title">
+        <img src="<%=asset_path 'navbar/BOOTH.png'%>" alt="BOOTH"/>
+    </div>
+    <%= render 'map' %>
+    <br>
+    <%= render 'booth' %>
+</div>
+
+<div class="container-fluid">
+    <br id="event">
+    <div class="section_title">
+        <img src="<%=asset_path 'navbar/EVENT.png'%>" alt="EVENT"/>
+    </div>
+    <%= render 'event' %>
+</div>
+
+<div class="container-fluid">
+    <br id="lineup">
+    <div class="section_title">
+        <img src="<%=asset_path 'navbar/LINEUP.png'%>" alt="LINEUP"/>
+    </div>
+    <%= render 'lineup' %>
+</div>
+
+

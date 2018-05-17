@@ -1,0 +1,461 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/****************************************/
+a {
+    text-decoration: none;
+    color: white;
+    
+    &:hover {
+        color: white !important;
+        font-weight: bold;
+        
+    }
+}
+.section_title {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.section_title img {
+    height: 5rem;
+}
+
+.container-fluid {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+/***********navigationbar****************/
+.navbar-default {
+    opacity: 0.95;
+}
+.navbar-brand, .navbar-nav {
+    text-align: center !important; 
+}
+.navbar-brand {
+    padding: 1rem !important;
+    & img {
+        height: 3rem;
+        line-height: 3rem;
+    }
+}
+.navbar-nav {
+    & img {
+        height: 2rem;
+        line-height: 2rem;
+    }
+}
+.desk_nav {
+    display: block;
+}
+.mobile_nav {
+    display: none;
+}
+
+/************header************/
+header {
+    // padding-top: 70px;
+    background-image: url("header/header.jpg");
+
+    /* Full height */
+    height: 100vh; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+header > .container {
+    text-align: center;
+}
+header .row {
+    color: white;
+    font-weight: bold;
+    height: 100vh;
+}
+header img {
+    margin-top: 15vh;
+    width: 100%;
+    // vertical-align: middle;
+}
+
+/***********************_booth.html.erb****************************/
+.booths {
+    text-align: center;
+}
+.booths > .row {
+    margin-bottom: 0.5rem;
+}
+.building {
+    padding: 0.5rem;
+    border: 2px solid #ececec;
+}
+.stair {
+    padding: 0.5rem;
+    border: 2px solid #ececec;
+}
+.stage {
+    padding: 0.5rem;
+    border: 2px solid #ececec;
+}
+.howl {
+    padding: 0.5rem;
+    border: 2px solid #ececec;
+}
+.foodtruck {
+    padding: 0.5rem;
+    border: 2px solid #ececec;
+    color: white;
+}
+.booth {
+    padding: 1.5rem;
+    border: 2px solid #ececec;
+    border-radius: 5px;
+    color: white;
+}
+.booth_info_img {
+    width: 75%;
+}
+.booth_img {
+    width: 100%;
+}
+.mini_mobile, .mobile, .tablet, .mini_desk, .desk, .large {
+    display: none;
+}
+@media screen and (max-width:400px) {
+    .mini_mobile {
+        display: block;
+        & img {
+            width: 320px;
+        }
+    }
+    .big {
+        display: none;
+    }
+}
+@media screen and (min-width:401px) and (max-width:450px) {
+    .mobile {
+        display: block;
+        & img {
+            width: 400px;
+        }
+    }
+    .big {
+        display: none;
+    }
+}
+@media screen and (min-width:451px) and (max-width:620px) {
+    .tablet {
+        display: block;
+        & img {
+            width: 450px;
+        }
+    }
+    .big {
+        display: none;
+    }
+}
+@media screen and (min-width:621px) and (max-width:750px) {
+    .mini_desk {
+        display: block;
+        & img {
+            width: 620px;
+        }
+    }
+    .big {
+        display: none;
+    }
+}
+@media screen and (min-width:751px) and (max-width:990px) {
+    .desk {
+        display: block;
+    }
+    .big {
+        display: none;
+    }
+}
+@media screen and (min-width:991px) and (max-width:1200px) {
+    .large {
+        display: block;
+    }
+    .big {
+        display: none;
+    }
+}
+/***********************event.html.erb****************************/
+// #event-img {
+//     width: 100%;
+//     // margin: 0;
+// }
+
+/***********************timetable.html.erb****************************/
+.item > img {
+    width: 100%;
+    vertical-align: bottom;
+}
+.timetable_item {
+    height: 100%;
+}
+.timetable_item .day {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.timetable_item p {
+    margin-bottom: 0;
+}
+.timetable_item .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: yellow;
+    margin-top: 20px;
+}
+.carousel-indicators {
+    display: none;
+}
+/***********************info.html.erb****************************/
+.comment_info {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px; //10px : before
+}
+.comments{
+    font-weight: bold;
+    background-color: white;
+    color: black;
+}
+.comment_name{
+        font-size: 15px;
+    }
+.comment_real{
+        font-size: 18px;
+    }
+
+
+.control {
+    background-color :white;
+    color: black;
+}
+.info_1{
+    padding-top: 70px;
+    // background-color: ;
+    //#474861 회색 #1262a4블루 #070657남색 #031230어파 #1b1854
+    
+    background-image: url("header/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    font-weight: bold;
+    color: white;
+}
+.info_1 {
+    margin-bottom: 0 !important;
+}
+.info_2 {
+    background-color: rgba(200, 200, 200, 0.7);
+    color: black;
+    padding: 1em 0;
+}
+
+.comment_table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.comment_text {
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+    border-bottom: 1px solid black;
+    
+}
+.comment_td {
+     border-bottom: 1px solid #444444;
+     padding: 20px;
+     vertical-align:center ;
+}    
+
+
+.info_text {
+        font-size: 32px;
+    
+}
+.info_intro {
+    font-size: 26px;
+}
+.comment_title {
+     font-size: 23px;
+}
+.comment_back .comment_text{
+    font-size: 20px;
+}
+
+/****************************map********************/ 
+.iw_inner {
+    color:black;
+    text-align:center; 
+    padding:5px;
+}
+
+
+/****************_footer.html.erb**********************/
+.navbar-static-bottom {
+    // border-top: 1px solid white;
+    background: black;
+    color: white !important;
+    width: 100%;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+footer img {
+    height: 2rem;
+}
+
+/*********************모바일 대응 반응형**********************/
+@media screen and (max-width:770px) {
+    .navbar-header {
+        float: left;
+    }
+    .navbar-nav {
+        margin-left: 5px !important;
+        float: left;
+    }
+    .nav>li {
+        display: inline-block !important;
+    }
+    .nav>li>a {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width:760px) {
+    .timetable_item .day {
+        font-size: 2rem;
+    }
+    .timetable_item .title {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    .timetable_item .when {
+        font-size: 1.5rem;
+    }
+    .timetable_item .where {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .navbar {
+        min-height: 30px !important;
+    }
+    .navbar-nav {
+        margin: 0px !important;
+    }
+    .navbar-header {
+        display: none;
+    }
+    .nav>li>a {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+    
+    .carousel-caption {
+        display: block;
+    }
+    .timetable_item .day { //스케줄 글자가 왜 사라지는지 모르겠음
+        font-size: 1.5rem;
+    }
+     
+    .timetable_item .title {
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+    .timetable_item .when {
+        font-size: 1rem;
+    }
+    .timetable_item .where {
+        font-size: 1rem;
+    }
+    
+    .mobile_booth {
+        width: 100%;
+    }
+    .info_text {
+        font-size: 1.5rem;
+    }
+    .info_intro {
+        font-size: 1.5rem;
+    }
+    .comment_title {
+     font-size: 1.4rem;   
+    }
+    .comment_back {
+        font-size: 1.2rem;
+    }
+    .comment_text {
+        font-size: 1.2rem;
+    }
+    .comment_name{
+        font-size: 1.2rem;
+        
+    }
+    .comment_real{
+        font-size: 1.2rem;
+        
+    }
+    .likelion{
+        text-align:center; color:white; font-size:30px;
+    }
+}
+@media screen and (max-width:450px) {
+    
+    .navbar-nav img {
+        height: 1rem;
+    }
+    
+    header img {
+        margin-top: 30vh;
+    }
+    .mobile_nav img{
+        height: 3rem;
+    }
+    .section_title {
+        padding: 1rem;
+        margin-top: 0;
+    }
+    .section_title img {
+        height: 2.5rem;
+    }
+    .info_text {
+        font-size: 1.5rem;
+    }
+    .info_intro {
+        font-size: 1.5rem;
+    }
+    .comment_title {
+     font-size: 1.4rem;   
+    }
+    .comment_back {
+        font-size: 1.2rem;
+    }
+    .comment_text {
+        font-size: 1.2rem;
+    }
+    .comment_name{
+        font-size: 1.2rem;
+        
+    }
+    .comment_real{
+        font-size: 1.2rem;
+        
+    }
+    
+    footer img {
+        height: 2rem;
+    }
+    .likelion{
+       text-align:center; color:white; font-size:30px; 
+    }
+}

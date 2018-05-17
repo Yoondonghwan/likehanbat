@@ -1,0 +1,117 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" >
+    <div class="item active" text-align="center" >
+      <div class="img_item">
+      <img src="<%=asset_path 'timeline/schedule.png'%>" class='img_item'  alt="첫번째 슬라이드">
+       </div>
+       <div class="carousel-caption timetable_item"> 
+        <p class="day">5월 23일 [수]</p>
+        <p class="line">_______________________________</p>
+      
+        <p class="title">☆플리마켓★</p>
+        <p class="when">12:00~20:00 </p>
+        <p class="where">운동장 옆 자갈밭</p>
+        
+        <!--<p class="title">☆인생사진페스티벌★</p>-->
+        <!--<p class="when">12:00~18:00</p>-->
+        <!--<p class="where">대운동장 및 N6동 일대</p>-->
+        
+        <p class="title">☆헤나, 페인스페인팅★<br>☆히바리움 만들기★</p>
+        <p class="when">12:00~18:00</p>
+        <p class="where">혜움광장</p>
+        
+        <p class="title">☆멍냥 페스티벌★</p>
+        <p class="when">14:00~18:00</p>
+        <p class="where">원형광장<br></p>
+        
+        <p class="title">☆배틀유니브★</p>
+        <p class="when">16:00~20:00</p>
+        <p class="where">N6동 앞, N2동 뒤 사이</p>
+        
+        <p class="title">☆방 탈출★</p>
+        <p class="when">15:00~18:00</p>
+        <p class="where">N6동 혜움광장</p>
+        
+        <p class="title">☆대동제 문화행사★</p>
+        <p class="when">18:00~21:30</p>
+        <p class="where">대운동장 무대<br><br><br><br></p> 
+      </div>
+    </div>
+    <div class="item" text-align="center">
+      <div class="img_item">
+      <img src="<%=asset_path 'timeline/schedule.png'%>" class='img_item'  alt="두번째 슬라이드">
+      </div>
+      <div class="carousel-caption timetable_item"> 
+        <p class="day">5월 24일 [목]</p>
+        <p class="line">________________________________</p>
+        
+        <p class="title">☆플리마켓★</p>
+        <p class="when">12:00~20:00 </p>
+        <p class="where">운동장 옆 자갈밭</p>
+        
+        <!--<p class="title">☆인생사진페스티벌★</p>-->
+        <!--<p class="when">12:00~18:00</p>-->
+        <!--<p class="where">대운동장 및 N6동 일대</p>-->
+        
+        <p class="title">☆헤나, 페인스페인팅★<br>☆히바리움 만들기★</p>
+        <p class="when">12:00~18:00</p>
+        <p class="where">혜움광장</p>
+        
+        <p class="title">☆배틀유니브 최강자전★</p>
+        <p class="when">12:00~16:00</p>
+        <p class="where">N6동 앞, N2동 뒤 사이</p>
+        
+        <p class="title">☆대동제 문화행사★</p>
+        <p class="when">18:00~22:00</p>
+        <p class="where">대운동장 무대</p>
+      </div>
+      
+    </div>
+     <div class="item" text-align="center">
+       <div class="img_item">
+      <img src="<%=asset_path 'timeline/schedule.png'%>" class="img_item" alt="세번째 슬라이드">
+      </div>
+      <div class="carousel-caption timetable_item"> 
+        <p class="day">5월 25일 [금]</p>
+        <p class="line">__________________________</p>
+        
+        <p class="title">☆플리마켓★</p>
+        <p class="when">12:00~20:00 </p>
+        <p class="where">운동장 옆 자갈밭</p>
+        
+        <!--<p class="title">☆인생사진페스티벌★</p>-->
+        <!--<p class="when">12:00~18:00</p>-->
+        <!--<p class="where">대운동장 및 N6동 일대</p>-->
+        
+        <p class="title">☆헤나, 페인스페인팅★<br>☆히바리움 만들기★</p>
+        <p class="when">12:00~18:00</p>
+        <p class="where">혜움광장</p>
+        
+        <p class="title">☆대동제 문화행사★</p>
+        <p class="when">19:00~23:00</p>
+        <p class="where">대운동장 무대</p> 
+      </div>
+    </div>
+  </div>
+    
+ <!-- Left and right controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+    <span class="sr-only">Next</span>
+  </a>
+</div>

@@ -1,0 +1,77 @@
+<div class="boothInfo">
+    <div class="container-fluid">
+        
+        <div class="info">
+            <div class="info_1">  
+                <p><img class="booth_info_img" src="<%=asset_path 'booth/LION.png'%>" style=" width: 60%;" alt="booth_info"></p>
+                <p class="info_text">안녕 나를 소개하지 내이름은 <%= @info.name %></p>
+                <p class="info_text">학과는 <%= @info.depart %></p>
+                <div class="info_2">    
+                    <!--<br>-->
+                    <p class="info_intro">부스 소개 내용 <%= @info.introduce %></p>
+                    <!--<br>-->
+                </div>
+            </div>
+                
+        </div>
+        
+        <div class="comment_info" style="text-align: center; font-weight: bold;padding: 5px; ">
+            <p class="comment_title">여러분들의 <a href="/likelion">핫한 후기</a>를 남겨주세요</p> 
+            <p class="comment_back"><a href="/">후기를 남기기 싫으면 눌러주세요!</a></p>
+            <p class="comment_text">욕설,나쁜말,부모님안부는 삼가해주세요!!</p>
+        </div>
+        
+        <div style="background-color:grey;" class="pady-1rem" >
+                <div class="container">
+                    <!--</br>-->
+                        <%= form_for(Comment.new, url: booth_comments_path(@info.id), html: {class: "form-inline"})  do |c|  %>
+                    <div class="input-group">
+                            <%= c.text_field :content, class: 'form-control',:maxlength => 60 %>
+                            <span class="input-group-btn">
+                                <%= c.submit '입력', class:'btn btn-default' %>
+                            </span>
+                            
+                        <% end %>
+                    
+                    </div>               
+                </div>
+            </div>
+        
+        <div class="comments">
+            <div class="container">
+                <br>
+                    <% @info.comments.reverse_each do |comment|%>
+                        <div class="comment_text" style="font-weight: bold; color: black; border-bottom: 1px solid black;">
+                        <div class="comment_name" >
+                            <p><%= comment.result %> <%= comment.result_1 %></p></div>
+                        <div class="comment_real" ><p>　　　<%=comment.content%></p></div>
+                        </div>
+                        
+                    
+                    <%end%>
+                <br>  
+            </div>
+            
+            <!--<div style="background-color:grey;" class="pady-1rem" >-->
+            <!--    <div class="container">-->
+                    
+                    
+                    <!--</br>-->
+            <!--            <%= form_for(Comment.new, url: booth_comments_path(@info.id), html: {class: "form-inline"})  do |c|  %>-->
+            <!--        <div class="input-group">-->
+            <!--                <%= c.text_field :content, class: 'form-control',:maxlength => 60 %>-->
+            <!--                <span class="input-group-btn">-->
+            <!--                    <%= c.submit '완료', class:'btn btn-default' %>-->
+            <!--                </span>-->
+                            
+            <!--            <% end %>-->
+                    
+            <!--        </div>               -->
+            <!--    </div>-->
+            <!--</div>-->
+            
+        </div> <!--end of comment-->
+    </div>
+</div>
+
+

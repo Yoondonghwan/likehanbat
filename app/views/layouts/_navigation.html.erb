@@ -1,0 +1,44 @@
+<!--<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-transparent ">-->
+<nav class="navbar navbar-fixed-top navbar-transp">
+  
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><img src="<%=asset_path 'navbar/ACCENT.png'%>" alt="ACCENT"/></a>
+    </div>
+    
+    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+      <ul class="nav navbar-nav">
+        <li><a href="/#timetable"><img src="<%=asset_path 'navbar/SCHEDULE.png'%>" alt="SCHEDULE"/></a></li>
+        <li><a href="/#booth"><img src="<%=asset_path 'navbar/BOOTH.png'%>" alt="BOOTH"/></a></li>
+        <li><a href="/#event"><img src="<%=asset_path 'navbar/EVENT.png'%>" alt="EVENT"/></a></li>
+        <li><a href="/#lineup"><img src="<%=asset_path 'navbar/LINEUP.png'%>" alt="LINEUP"/></a></li>
+      </ul>
+      
+      <!--<ul class="nav navbar-nav navbar-right mobile_nav">-->
+      <!--  <li class="dropdown">-->
+      <!--    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="<%=asset_path 'navbar/nav_menu2.png'%>" alt="nav_menu"/></span></a>-->
+      <!--    <ul class="dropdown-menu">-->
+      <!--      <li><a href="#"><img src="<%=asset_path 'navbar/BOOTH.png'%>" alt="BOOTH"/></a></li>-->
+      <!--      <li><a href="#"><img src="<%=asset_path 'navbar/EVENT.png'%>" alt="EVENT"/></a></li>-->
+      <!--      <li><a href="#"><img src="<%=asset_path 'navbar/SCHEDULE.png'%>" alt="SCHEDULE"/></a></li>-->
+      <!--      <li><a href="#"><img src="<%=asset_path 'navbar/LINEUP.png'%>" alt="LINEUP"/></a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">Separated link</a></li>-->
+      <!--    </ul>-->
+      <!--  </li>-->
+      <!--</ul>-->
+      
+    <!--</div>-->
+  </div><!-- /.container-fluid -->
+</nav>                
+
+<script>
+  $( window ).scroll(function() {
+    // if( window.width > 770) {
+      if ( window.scrollY > 80 ) $( ".navbar" ).addClass("navbar-default").removeClass( "navbar-transp" );
+      else $( ".navbar" ).removeClass("navbar-default").addClass( "navbar-transp" );
+    // } else {
+      // $( ".navbar" ).removeClass("navbar-default").addClass( "navbar-transp" ); 
+    // }
+  });
+</script>

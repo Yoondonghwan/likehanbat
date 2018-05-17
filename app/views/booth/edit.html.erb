@@ -1,0 +1,9 @@
+<div class='container' style=" margin-top: 45px;">
+<form action='/booth/update/<%=@info_e.id%>' method='post'>
+   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+   <p style="font-weight: bold;">부스이름</p> <textarea name="name_u" style="color:black;"rows="2"; cols="50";><%=@info_e.name%></textarea><br>
+    <p style="font-weight: bold;">학과</p> <textarea name="depart_u" style="color:black;"rows="2"; cols="50";><%=@info_e.depart%></textarea><br>
+    <p style="font-weight: bold;">설명</p> <textarea name="introduce_u" style="color:black;" rows="19"; cols="145"><%=@info_e.introduce%></textarea><br>
+    <input type="submit" value="수정하기" class="btn btn-default">
+</form>
+</div>

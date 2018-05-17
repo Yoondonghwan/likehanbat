@@ -1,0 +1,8 @@
+<div class= "container" style=" margin-top: 100px;">
+<% @comment_all.each do |x| %>   
+	<p style="font-size:18px;"><%=x.id%>:<%=x.content%></p> 
+    <p style="font-size:18px;"> => <a href='/<%=x.id%>/destroy' >삭제</a></p>
+	<br>
+
+<%end%>
+</div>

@@ -1,0 +1,203 @@
+<div id="map" style="width:100%;height:450px;"></div>
+
+<script>
+    var mapOptions = {
+        center: new naver.maps.LatLng(36.351903, 127.300696),
+        zoom: 12,
+        draggable: false,
+            pinchZoom: false,
+            scrollWheel: false,
+            keyboardShortcuts: false,
+            disableDoubleTapZoom: true,
+            disableDoubleClickZoom: true,
+            disableTwoFingerTapZoom: true
+    };
+    var map = new naver.maps.Map('map', mapOptions);
+    
+    playground_line = new naver.maps.Polyline({ //운동장 line
+        path: [
+            new naver.maps.LatLng(36.353432, 127.300605),
+            new naver.maps.LatLng(36.354195, 127.301316),
+            new naver.maps.LatLng(36.353841, 127.301941),
+            new naver.maps.LatLng(36.353070, 127.301211)
+        ],
+        map: map,
+        strokeColor: '#1b1854',
+        strokeOpacity: 0.7,
+        strokeWeight: 5
+    });
+    playground = new naver.maps.Polygon({ //운동장
+        map: map,
+        paths: [
+            [
+                new naver.maps.LatLng(36.353432, 127.300605),
+            new naver.maps.LatLng(36.354195, 127.301316),
+            new naver.maps.LatLng(36.353841, 127.301941),
+            new naver.maps.LatLng(36.353070, 127.301211)
+            ]
+        ],
+        fillColor: '#1b1854',
+        fillOpacity: 0.3,
+        strokeWeight: 0,
+        clickable: true
+    });
+    // fountain = new naver.maps.Rectangle({ //분수대
+    //     map: map,
+    //     bounds: new naver.maps.LatLngBounds(
+    //         new naver.maps.LatLng(36.352258, 127.301025),
+    //         new naver.maps.LatLng(36.351989, 127.301673)
+    //     ),
+    //     fillColor: '#1b1854',
+    //     fillOpacity: 0.3,
+    //     strokeColor: '#1b1854',
+    //     strokeOpacity: 0.6,
+    //     strokeWeight: 0,
+    //     clickable: true
+    // });
+    hyeumGround = new naver.maps.Polygon({ //혜움 광장
+        map: map,
+        paths: [
+            [
+                new naver.maps.LatLng(36.350820, 127.300437),
+                new naver.maps.LatLng(36.350838, 127.301001),
+                new naver.maps.LatLng(36.350671, 127.300961),
+                new naver.maps.LatLng(36.350307, 127.300564),
+                new naver.maps.LatLng(36.350304, 127.300446)
+            ]
+        ],
+        fillColor: '#1b1854',
+        fillOpacity: 0.3,
+        strokeColor: '#1b1854',
+        strokeOpacity: 0.6,
+        strokeWeight: 0,
+        clickable: true
+    });
+    var battleUniv = new naver.maps.LatLng(36.352309, 127.299991);
+    battle = new naver.maps.Circle({ //배틀유니브
+        map: map,
+        center: battleUniv,
+        radius: 20,
+        fillColor: '#1b1854',
+        fillOpacity: 0.3,
+        strokeColor: '#1b1854',
+        strokeOpacity: 0.6,
+        strokeWeight: 0,
+        clickable: true
+    });
+    var circleGround = new naver.maps.LatLng(36.350127, 127.300097);
+    circle = new naver.maps.Circle({ //원형광장
+        map: map,
+        center: circleGround,
+        radius: 18,
+        fillColor: '#1b1854',
+        fillOpacity: 0.3,
+        strokeColor: '#1b1854',
+        strokeOpacity: 0.6,
+        strokeWeight: 0,
+        clickable: true
+    });
+    //마커
+    var playground = new naver.maps.Marker({
+        map: map,
+        position: new naver.maps.LatLng(36.353170, 127.301211)
+    });
+    // var fountain = new naver.maps.Marker({
+    //     map: map,
+    //     position: new naver.maps.LatLng(36.352072, 127.301380)
+    // });
+    var hyeumGround = new naver.maps.Marker({
+        map: map,
+        position: new naver.maps.LatLng(36.350594, 127.300651)
+    });
+    var battle = new naver.maps.Marker({
+        map: map,
+        position: battleUniv
+    });
+    var circle = new naver.maps.Marker({
+        map: map,
+        position: circleGround
+    });
+    
+    var playground_String = [
+            '<div class="iw_inner">',
+                '대동제 문화 축제<br>플리마켓',
+            '</div>'
+        ].join('');
+    var playground_infowindow = new naver.maps.InfoWindow({
+        content: playground_String,
+        borderColor: "#ffffff"
+    });
+    naver.maps.Event.addListener(playground, "click", function(e) {
+        if (playground_infowindow.getMap()) {
+            playground_infowindow.close();
+        } else {
+            playground_infowindow.open(map, playground);
+        }
+    });
+    var battle_String = [
+            '<div class="iw_inner">',
+                '배틀유니브',
+            '</div>'
+        ].join('');
+    var battle_infowindow = new naver.maps.InfoWindow({
+        content: battle_String,
+        borderColor: "#ffffff"
+    });
+    naver.maps.Event.addListener(battle, "click", function(e) {
+        if (battle_infowindow.getMap()) {
+            battle_infowindow.close();
+        } else {
+            battle_infowindow.open(map, battle);
+        }
+    });
+    // var fountain_String = [ //이거 어디간거야
+    //         '<div class="iw_inner">',
+    //             '분수대 행사들',
+    //         '</div>'
+    //     ].join('');
+    // var fountain_infowindow = new naver.maps.InfoWindow({
+    //     content: fountain_String,
+    //     borderColor: "#ffffff"
+    // });
+    // naver.maps.Event.addListener(fountain, "click", function(e) {
+    //     if (fountain_infowindow.getMap()) {
+    //         fountain_infowindow.close();
+    //     } else {
+    //         fountain_infowindow.open(map, fountain);
+    //     }
+    // });
+    var hyeumGround_String = [
+            '<div class="iw_inner">',
+                '헤나<br>페이스페인팅<br>히바리움<br>방탈출',
+            '</div>'
+        ].join('');
+    var hyeumGround_infowindow = new naver.maps.InfoWindow({
+        content: hyeumGround_String,
+        borderColor: "#ffffff"
+    });
+    naver.maps.Event.addListener(hyeumGround, "click", function(e) {
+        if (hyeumGround_infowindow.getMap()) {
+            hyeumGround_infowindow.close();
+        } else {
+            hyeumGround_infowindow.open(map, hyeumGround);
+        }
+    });
+    var circle_String = [
+            '<div class="iw_inner">',
+                '멍냥페스티벌',
+            '</div>'
+        ].join('');
+    var circle_infowindow = new naver.maps.InfoWindow({
+        content: circle_String,
+        borderColor: "#ffffff"
+    });
+    naver.maps.Event.addListener(circle, "click", function(e) {
+        if (circle_infowindow.getMap()) {
+            circle_infowindow.close();
+        } else {
+            circle_infowindow.open(map, circle);
+        }
+    });
+    
+    
+</script>
