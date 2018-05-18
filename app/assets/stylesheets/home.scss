@@ -57,7 +57,7 @@ a {
 /************header************/
 header {
     // padding-top: 70px;
-    background-image: url("header/header.jpg");
+    background-image: asset-data-url("header/header.jpg");
 
     /* Full height */
     height: 100vh; 
